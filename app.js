@@ -344,7 +344,7 @@ function getNameFromPhone(phone, callback) {
 	// comment out if you want to debug for another locality:
 	// throw new Error(phone);
 
-	glob(process.env.HOME + '/Library/Application\ Support/AddressBook/**/AddressBook-v22.abcddb', function (er, files) {
+	glob.glob(process.env.HOME + '/Library/Application\ Support/AddressBook/**/AddressBook-v22.abcddb', function (er, files) {
 		var found = false;
 
 		for (var i = 0; i < files.length; i++) {
